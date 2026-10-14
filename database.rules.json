@@ -1,0 +1,7 @@
+{"rules":{
+"admins":{"$u":{".read":"auth!=null && auth.uid==$u",".write":false}},
+"approved":{".read":true,"$u":{".write":"root.child('admins/'+auth.uid).val()===true"}},
+"providers":{".read":true,"$u":{".write":"auth!=null && (auth.uid==$u || root.child('admins/'+auth.uid).val()===true)"}},
+"slots":{".read":true,"$id":{".write":"auth!=null && (root.child('approved/'+auth.uid).val()===true || root.child('admins/'+auth.uid).val()===true)"}},
+"appointments":{".read":"auth!=null && (root.child('approved/'+auth.uid).val()===true || root.child('admins/'+auth.uid).val()===true)",
+"$id":{".write":"auth!=null && (root.child('approved/'+auth.uid).val()===true || root.child('admins/'+auth.uid).val()===true)"}}}}
