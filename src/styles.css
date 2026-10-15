@@ -3,7 +3,7 @@
 body{
   margin:0;
   font-family:Montserrat,sans-serif;
-  background:url('/wallpaper.jpg') center/cover fixed no-repeat;
+  background:url('/varuaspa-agenda/wallpaper.jpg') center/cover fixed no-repeat;
   color:var(--dark);
   min-height:100vh;
 }
