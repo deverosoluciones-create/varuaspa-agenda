@@ -239,3 +239,4 @@ return <><div className="card"><h3>Prestadores</h3>{Object.entries(P).map(([u,p]
 </div>
 <div className="acts"><button className={`sm ${A[u]?'danger':'gold'}`} onClick={()=>update(ref(db,'approved'),{[u]:A[u]?null:true})}>{A[u]?'Revocar acceso':'Aprobar'}</button></div></div>)}</div>
 <div className="card"><h3>Actividad ({list.length} citas)</h3>{list.map(([id,a])=><div key={id} className="item" style={{borderColor:P[a.providerId]?.color}}><b>{a.date} {a.start} · {P[a.providerId]?.name}</b>{a.client} · {a.phone} · {a.duration} min{a.service?` · ${a.service}`:''}</div>)}</div></>}
+
